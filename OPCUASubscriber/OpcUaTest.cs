@@ -12,6 +12,9 @@ namespace OPCUASubscriber
 {
     class OpcUaTest
     {
+
+        public System.IO.StreamWriter resultFile;
+        
         static void Main(string[] args)
         {
             if (args == null || args.Length == 0 ) {
@@ -26,7 +29,7 @@ namespace OPCUASubscriber
         }
 
         public static void usage() {
-            Console.WriteLine("First argument mut be path conf file, now stopping");
+            Console.WriteLine("First argument mut be path conf file, the second path to outputfile, now stopping");
             Thread.Sleep(2000);
             Environment.Exit(0);
         }
@@ -34,6 +37,11 @@ namespace OPCUASubscriber
 
         public void SubscribeToUA(String[] args)
         {
+            
+            resultFile = new System.IO.StreamWriter(args[1], true);
+
+            
+            
             //getting the nodeids and loading them
             List<EasyUAMonitoredItemArguments> nodeList = readConf(args);
             
@@ -43,21 +51,10 @@ namespace OPCUASubscriber
             try
             {
                 
-                
-                //NodeId ni = new NodeId("ns=2;s=PowerHub.LU1.WatchdogDevelopment");
                 UAEndpointDescriptor ud = new UAEndpointDescriptor("opc.tcp://test-opc-ua.powerhub.dk:32402");
                 EasyUAClient.EngineParameters.CertificateAcceptancePolicy.AcceptAnyCertificate = true;
                 easyUAClient.MonitoredItemChanged += easyUAClient_MonitoredItemChanged;
-                //EasyUAClient.EngineParameters.ApplicationCertificateStore = "";
-                //UANodeId nid = new UANodeId("ns=2;s=Danfoss.DANFOSS_01.WatchdogReceived");
-                //easyUAClient.SubscribeMonitoredItem(ud, nid, 1000);
-                //easyUAClient.MonitoredItemChanged += easyUAClient_MonitoredItemChanged;
-
                 easyUAClient.SubscribeMultipleMonitoredItems(nodeList.ToArray <EasyUAMonitoredItemArguments>());
-
-
-                //String Text = easyUAClient.ReadValue("opc.tcp://test-opc-ua.powerhub.dk:32402", nid).ToString();
-                //String Text = easyUAClient.ReadValue( ud, nid).ToString();
             }
             catch (Exception ee)
             {
@@ -72,11 +69,13 @@ namespace OPCUASubscriber
 
         }
 
-        static void easyUAClient_MonitoredItemChanged(object sender, EasyUAMonitoredItemChangedEventArgs e)
+        public void easyUAClient_MonitoredItemChanged(object sender, EasyUAMonitoredItemChangedEventArgs e)
         {
             // Display value
             // Remark: Production code would check e.Exception before accessing e.AttributeData.
             Console.WriteLine( e.Arguments.NodeId +" " + e.AttributeData.ServerTimestamp+" " + e.AttributeData.Value );
+            resultFile.WriteLine(e.Arguments.NodeId + ";" + e.AttributeData.ServerTimestamp + ";" + e.AttributeData.Value);
+            resultFile.Flush();
         }
 
         public List<EasyUAMonitoredItemArguments> readConf(String[] args)
