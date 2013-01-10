@@ -1,0 +1,16 @@
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\OPCUASubscriber.exe
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\OPCUASubscriber.pdb
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\Opc.Ua.Client.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\Opc.Ua.ClientControls.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\Opc.Ua.ComInterop.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\Opc.Ua.Configuration.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\Opc.Ua.Core.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\Opc.Ua.QuickstartsLibrary.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\Opc.Ua.Server.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\OpcLabs.BaseLib.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\OpcLabs.EasyOpcUA.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\Interop.NetFwTypeLib.dll
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\bin\Debug\OpcLabs.EasyOpcUA.xml
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\obj\x86\Debug\OPCUASubscriber.exe
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\obj\x86\Debug\OPCUASubscriber.pdb
+C:\Users\laoch\sourcekode\2010projects\OPCUASubscriber\OPCUASubscriber\obj\x86\Debug\OPCUASubscriber.csprojResolveAssemblyReference.cache
