@@ -10,8 +10,8 @@ namespace OPCUASubscriber.CosmUpload
     class Cosm
     {
         const string baseUri = "http://api.cosm.com";
-        const string apiKey = "sN8NVF3oRQ4GnwxGd1YSLUPzn8-SAKxJa0hqdHhwNm1Vdz0g";
-        const string feedId = "/v2/feeds/68554";
+        const string apiKey = "xxxxxxxxx";
+        const string feedId = "/v2/feeds/yyyyyyyy";
 
 
         public static void upload(string value)
